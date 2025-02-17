@@ -1,3 +1,4 @@
+"use client";
 import { FC, ComponentProps, ReactNode } from "react";
 import styles from "./style.module.css";
 

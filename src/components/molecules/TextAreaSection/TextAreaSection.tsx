@@ -1,3 +1,4 @@
+"use client";
 import { FC, ComponentProps } from "react";
 import { TextArea } from "@/components/atoms";
 import styles from "./style.module.css";
