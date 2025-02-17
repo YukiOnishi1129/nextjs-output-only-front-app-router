@@ -1,12 +1,16 @@
-import { useParams } from "next/navigation";
+"use client";
+import { FC } from "react";
 import { useTodoContext } from "@/hooks/useTodoContext";
 import { BaseLayout } from "@/components/organisms";
 import { InputForm, TextArea } from "@/components/atoms";
 import styles from "./style.module.css";
 
-export const TodoDetailTemplate = () => {
+type TodoDetailTemplateProps = {
+  id: string;
+};
+
+export const TodoDetailTemplate: FC<TodoDetailTemplateProps> = ({ id }) => {
   const { originTodoList } = useTodoContext();
-  const { id } = useParams();
   const todo = originTodoList.find((todo) => String(todo.id) === id);
 
   return (

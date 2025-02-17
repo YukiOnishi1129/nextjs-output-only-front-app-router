@@ -1,3 +1,5 @@
+"use client";
+import { FC } from "react";
 import { Controller } from "react-hook-form";
 
 import { useTodoEditTemplate } from "./useTodoEditTemplate";
@@ -7,10 +9,15 @@ import { InputFormSection, TextAreaSection } from "@/components/molecules";
 import { CommonButton } from "@/components/atoms";
 import styles from "./style.module.css";
 
-export const TodoEditTemplate = () => {
+type TodoEditTemplateProps = {
+  id: string;
+};
+
+export const TodoEditTemplate: FC<TodoEditTemplateProps> = ({ id }) => {
   const { originTodoList, updateTodo } = useTodoContext();
 
   const { todo, control, errors, handleEditSubmit } = useTodoEditTemplate({
+    id,
     originTodoList,
     updateTodo,
   });

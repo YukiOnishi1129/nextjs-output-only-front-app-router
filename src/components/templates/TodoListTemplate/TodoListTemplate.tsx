@@ -1,3 +1,5 @@
+"use client";
+
 import { useMemo } from "react";
 import { useForm, Controller } from "react-hook-form";
 import * as z from "zod";

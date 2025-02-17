@@ -1,3 +1,4 @@
+"use client";
 import { Controller } from "react-hook-form";
 
 import { useTodoContext } from "@/hooks/useTodoContext";

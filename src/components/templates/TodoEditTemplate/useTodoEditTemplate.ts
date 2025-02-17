@@ -1,5 +1,4 @@
 import { useMemo, useCallback } from "react";
-import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -17,21 +16,21 @@ const schema = z.object({
 });
 
 type UseTodoEditTemplateParams = {
+  id: string;
   originTodoList: Array<TodoType>;
   updateTodo: (id: number, title: string, content?: string) => void;
 };
 
 export const useTodoEditTemplate = ({
+  id,
   originTodoList,
   updateTodo,
 }: UseTodoEditTemplateParams) => {
   const navigate = useRouter();
 
-  const { id } = useParams();
-
   const todo = useMemo(
     () => originTodoList.find((todo) => String(todo.id) === id),
-    [id, originTodoList]
+    [originTodoList, id]
   );
 
   const {
