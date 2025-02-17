@@ -9,9 +9,9 @@ export const BASE_PATH = "";
  */
 export const NAVIGATION_LIST = {
   TOP: `${BASE_PATH}/`,
-  DETAIL: `${BASE_PATH}/:id`,
-  CREATE: `${BASE_PATH}/create`,
-  EDIT: `${BASE_PATH}/edit/:id`,
+  DETAIL: `${BASE_PATH}/todo/:id`,
+  CREATE: `${BASE_PATH}/todo/create`,
+  EDIT: `${BASE_PATH}/todo/edit/:id`,
 };
 
 /**
@@ -20,7 +20,7 @@ export const NAVIGATION_LIST = {
  */
 export const NAVIGATION_PATH = {
   TOP: `${BASE_PATH}/`,
-  DETAIL: `${BASE_PATH}/`,
-  CREATE: `${BASE_PATH}/create`,
-  EDIT: `${BASE_PATH}/edit/`,
+  DETAIL: `${BASE_PATH}/todo/`,
+  CREATE: `${BASE_PATH}/todo/create`,
+  EDIT: `${BASE_PATH}/todo/edit/`,
 };
