@@ -1,4 +1,4 @@
-import { TodoType } from "../types/todo";
+import { TodoType } from "@/types/todo";
 
 /**
  * Todoリストの処置値

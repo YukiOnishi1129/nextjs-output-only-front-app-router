@@ -1,6 +1,6 @@
 import { createContext, FC, ReactNode } from "react";
-import { TodoType } from "../types/todo";
-import { useTodo } from "../hooks/useTodo";
+import { TodoType } from "@/types/todo";
+import { useTodo } from "@/hooks/useTodo";
 
 type TodoContextType = {
   originTodoList: Array<TodoType>;

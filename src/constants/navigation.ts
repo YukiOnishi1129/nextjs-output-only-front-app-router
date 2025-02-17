@@ -1,6 +1,5 @@
 /**
  * ベースPATH
- * @type {string}
  */
 export const BASE_PATH = "";
 
